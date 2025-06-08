@@ -3,4 +3,6 @@ This project represents my initial learnings on how to configure a reasonably we
 
 ## Tools
 
-I'll list some tools here later after I've summarized them all.
+I'll list some tools here later after I've summarized them all. 
+
+TEST ADD MORE TEXT
