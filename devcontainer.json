@@ -1,0 +1,13 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "postCreateCommand": "scripts/setup.sh",
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    },
+    "forwardPorts": [
+        "22111",
+        "22112"
+    ]
+}
