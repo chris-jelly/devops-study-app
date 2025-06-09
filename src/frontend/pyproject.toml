@@ -3,7 +3,7 @@ name = "study-tracker-frontend"
 version = "0.0.0"
 description = "Frontend for DevOps Study Tracker application"
 readme = "README.md"
-authors = [{ name = "Mischa van den Burg", email = "mischa@gmail.com" }]
+authors = [{ name = "Christopher Jelly", email = "christopher.p.jelly@gmail.com" }]
 requires-python = ">=3.13"
 dependencies = [
     "flask>=3.1.1",
