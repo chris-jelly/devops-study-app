@@ -6,7 +6,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 WORKDIR /app
 
 # Install dependencies in cache
-RUN --mount=type=cache,target=/root/.cache/uv \
+RUN --mount=type=cache,target=/var/cache/uv,id=uv-cache \
     --mount=type=bind,source=uv.lock,target=uv.lock \
     --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
     uv sync --locked --no-install-project --no-editable
@@ -15,7 +15,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 COPY . /app
 
 # Sync the project and install it.
-RUN --mount=type=cache,target=/root/.cache/uv \
+RUN --mount=type=cache,target=/var/cache/uv,id=uv-cache \
     uv sync --locked --no-editable
 
 FROM python:3.13-alpine
