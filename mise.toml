@@ -1,5 +1,6 @@
 [tools]
 pre-commit = "latest"
+trivy = "latest"
 uv = "latest"
 
 [settings]
