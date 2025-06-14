@@ -10,15 +10,15 @@ jobs:
     outputs:
       should_run: ${{ steps.filter.outputs.backend }}
 
-      steps:
-        - uses: actions/checkout@v4
-        - uses: dorny/paths-filter@v3.0.2
-          id: filter
-          with:
-            filters: |
-              backend:
-                - 'src/backend/**'
-                - '.github/workflows/backend-tests.yaml'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v3.0.2
+        id: filter
+        with:
+          filters: |
+            backend:
+              - 'src/backend/**'
+              - '.github/workflows/backend-tests.yaml'
   test:
     name: Test Backend
 
