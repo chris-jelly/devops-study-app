@@ -21,13 +21,12 @@ jobs:
               - '.github/workflows/backend-tests.yaml'
   test:
     name: Test Backend
-
     needs: check_paths
     if: ${{ needs.check_paths.outputs.should_run == 'true' }}
     runs-on: ubuntu-latest
     defaults:
       run:
-        working_directory: ./src/backend
+        working-directory: ./src/backend
 
     steps:
       - name: Checkout code
