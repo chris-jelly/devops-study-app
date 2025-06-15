@@ -21,7 +21,7 @@ jobs:
       - name: Build Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./src/backend
+          context: .
           file: ./Dockerfile
           push: false
           tags: backend:${{ github.sha }}
