@@ -3,8 +3,7 @@ name: Backend Build
 on:
   workflow_run:
     workflows: ['backend-tests']
-    types: [completed, skipped]  
-    branches: [main]
+    types: [completed]  
 
 jobs:
   build-and-scan:
