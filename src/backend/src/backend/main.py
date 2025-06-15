@@ -85,7 +85,7 @@ async def read_sessions(
 
 @app.get("/stats", response_model=Stats)
 async def read_stats():
-    """Get aggregated statistics about study sessions"""
+    """Get aggregated statistics about study session. EXTRA TEXT"""
     logger.info("Fetching statistics")
     try:
         return get_statistics()
@@ -97,6 +97,7 @@ async def read_stats():
 
 
 # Marker for CI pipeline
+# This comment is used to trigger the CI pipeline when changes are made to this file.
 # This comment is used to trigger the CI pipeline when changes are made to this file.
 
 
