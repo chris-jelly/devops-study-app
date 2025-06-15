@@ -1,7 +1,10 @@
 name: Backend Build
 
 on:
-  pull_request:
+  workflow_run:
+    workflows: ['backend-tests']
+    types: [completed]  
+    branches: [main]
 
 jobs:
   build-and-scan:
@@ -10,7 +13,6 @@ jobs:
     defaults:
       run:
         working-directory: ./src/backend
-    needs: backend-tests/test
 
     steps:
       - name: Checkout code
