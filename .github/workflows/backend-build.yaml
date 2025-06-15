@@ -2,7 +2,7 @@ name: Backend Build
 
 on:
   workflow_run:
-    workflows: ['backend-tests']
+    workflows: ['Backend Tests']
     types: [completed]  
 
 jobs:
