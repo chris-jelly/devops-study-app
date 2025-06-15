@@ -22,8 +22,9 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ./src/backend
-          file: Dockerfile
+          file: ./src/backend/Dockerfile
           push: false
+          load: true
           tags: backend:${{ github.sha }}
 
       - name: Scan Docker image
