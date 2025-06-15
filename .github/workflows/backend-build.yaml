@@ -1,9 +1,7 @@
 name: Backend Build
 
 on:
-  workflow_run:
-    workflows: ['Backend Tests']
-    types: [completed]  
+  pull_request:
 
 jobs:
   build-and-scan:
