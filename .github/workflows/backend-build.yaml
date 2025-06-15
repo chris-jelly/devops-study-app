@@ -10,6 +10,7 @@ jobs:
     defaults:
       run:
         working-directory: ./src/backend
+    needs: backend-tests/test
 
     steps:
       - name: Checkout code
