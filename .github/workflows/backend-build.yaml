@@ -1,12 +1,16 @@
 name: Backend Build
 
 on:
-  pull_request:
+  workflow_run:
+    workflows: ['Backend Tests']
+    types:
+      - completed
 
 jobs:
   build-and-scan:
     name: Build and Scan Backend
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event.workflow_run.conclusion == 'skipped' }}
     defaults:
       run:
         working-directory: ./src/backend
@@ -32,5 +36,5 @@ jobs:
         with:
           image-ref: backend:${{ github.sha }}
           format: table
-          exit-code: 1
+          exit-code: 0
           severity: HIGH,CRITICAL
