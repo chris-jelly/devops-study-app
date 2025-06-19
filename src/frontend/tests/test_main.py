@@ -55,10 +55,7 @@ def test_index_page(client):
         assert rendered_sessions[0]["formatted_date"] == "2025-04-23 10:15"
 
         # Verify the sessions are sorted by timestamp (newest first)
-        assert (
-            rendered_sessions[0]["timestamp_obj"]
-            > rendered_sessions[1]["timestamp_obj"]
-        )
+        assert rendered_sessions[0]["timestamp_obj"] > rendered_sessions[1]["timestamp_obj"]
 
 
 @responses.activate
