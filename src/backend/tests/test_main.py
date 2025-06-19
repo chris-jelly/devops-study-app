@@ -97,9 +97,7 @@ async def test_read_sessions_empty(client: AsyncClient):
 async def test_read_sessions_all(client: AsyncClient):
     """Test reading all sessions."""
     # Create some sessions first using the storage function directly for setup
-    save_session(
-        StudySessionCreate(minutes=25, tag="Kubernetes")
-    )  # Use imported save_session
+    save_session(StudySessionCreate(minutes=25, tag="Kubernetes"))  # Use imported save_session
     save_session(StudySessionCreate(minutes=50, tag="AWS"))  # Use imported save_session
 
     response = await client.get("/sessions")
@@ -113,13 +111,9 @@ async def test_read_sessions_all(client: AsyncClient):
 @pytest.mark.asyncio
 async def test_read_sessions_by_tag(client: AsyncClient):
     """Test reading sessions filtered by tag."""
-    save_session(
-        StudySessionCreate(minutes=25, tag="Kubernetes")
-    )  # Use imported save_session
+    save_session(StudySessionCreate(minutes=25, tag="Kubernetes"))  # Use imported save_session
     save_session(StudySessionCreate(minutes=50, tag="AWS"))  # Use imported save_session
-    save_session(
-        StudySessionCreate(minutes=15, tag="Kubernetes")
-    )  # Use imported save_session
+    save_session(StudySessionCreate(minutes=15, tag="Kubernetes"))  # Use imported save_session
 
     response = await client.get("/sessions?tag=Kubernetes")
     assert response.status_code == 200
@@ -141,13 +135,9 @@ async def test_read_sessions_by_tag(client: AsyncClient):
 @pytest.mark.asyncio
 async def test_read_stats(client: AsyncClient):
     """Test reading statistics."""
-    save_session(
-        StudySessionCreate(minutes=25, tag="Kubernetes")
-    )  # Use imported save_session
+    save_session(StudySessionCreate(minutes=25, tag="Kubernetes"))  # Use imported save_session
     save_session(StudySessionCreate(minutes=50, tag="AWS"))  # Use imported save_session
-    save_session(
-        StudySessionCreate(minutes=15, tag="Kubernetes")
-    )  # Use imported save_session
+    save_session(StudySessionCreate(minutes=15, tag="Kubernetes"))  # Use imported save_session
 
     response = await client.get("/stats")
     assert response.status_code == 200
@@ -245,6 +235,4 @@ def test_main_function(monkeypatch):
     main()
 
     # Check that uvicorn.run was called with the expected arguments
-    mock_run.assert_called_once_with(
-        "backend.main:app", host="0.0.0.0", port=22112, reload=True
-    )
+    mock_run.assert_called_once_with("backend.main:app", host="0.0.0.0", port=22112, reload=True)
