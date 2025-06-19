@@ -6,9 +6,7 @@ import os
 from typing import Dict, List, Any
 
 # Configure logging
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
 # Create Flask application
@@ -34,9 +32,7 @@ def format_session(session: Dict[str, Any]) -> Dict[str, Any]:
 def get_sessions() -> List[Dict[str, Any]]:
     """Get all study sessions from the API"""
     try:
-        response = requests.get(
-            f"{app.config['API_URL']}/sessions", timeout=app.config["API_TIMEOUT"]
-        )
+        response = requests.get(f"{app.config['API_URL']}/sessions", timeout=app.config["API_TIMEOUT"])
         response.raise_for_status()
         sessions = response.json()
 
@@ -107,17 +103,13 @@ def health():
     """Health check endpoint for monitoring"""
     try:
         # Attempt to connect to the API
-        response = requests.get(
-            f"{app.config['API_URL']}/health", timeout=app.config["API_TIMEOUT"]
-        )
+        response = requests.get(f"{app.config['API_URL']}/health", timeout=app.config["API_TIMEOUT"])
         api_status = response.status_code == 200
     except requests.RequestException:
         api_status = False
 
     status = "healthy" if api_status else "unhealthy"
-    return jsonify(
-        {"status": status, "api_connectivity": api_status}
-    ), 200 if api_status else 503
+    return jsonify({"status": status, "api_connectivity": api_status}), 200 if api_status else 503
 
 
 def main():
