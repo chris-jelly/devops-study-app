@@ -4,10 +4,10 @@ repos:
     hooks:
       # Run linter
       - id: ruff
-        files: ^src/.*\.py$
+        args: [--fix]
       # run formatter
       - id: ruff-format
-        files: ^src/.*\.py$
+      
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v4.8.2
     hooks:
