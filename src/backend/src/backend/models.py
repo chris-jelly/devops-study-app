@@ -18,9 +18,7 @@ class StudySession(StudySessionCreate):
     """Complete study session model including generated fields"""
 
     id: str = Field(..., description="Unique identifier for the session")
-    timestamp: datetime = Field(
-        ..., description="Timestamp of when the session was created"
-    )
+    timestamp: datetime = Field(..., description="Timestamp of when the session was created")
 
 
 class Stats(BaseModel):
@@ -29,6 +27,4 @@ class Stats(BaseModel):
     total_time: int = Field(..., description="Total study time in minutes")
     time_by_tag: Dict[str, int] = Field(..., description="Study time grouped by tag")
     total_sessions: int = Field(..., description="Total number of study sessions")
-    sessions_by_tag: Dict[str, int] = Field(
-        ..., description="Number of sessions grouped by tag"
-    )
+    sessions_by_tag: Dict[str, int] = Field(..., description="Number of sessions grouped by tag")

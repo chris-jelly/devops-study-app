@@ -82,9 +82,7 @@ def get_all_sessions() -> List[StudySession]:
 def get_sessions_by_tag(tag: str) -> List[StudySession]:
     """Retrieve study sessions filtered by tag"""
     all_sessions = get_all_sessions()
-    filtered_sessions = [
-        session for session in all_sessions if session.tag.lower() == tag.lower()
-    ]
+    filtered_sessions = [session for session in all_sessions if session.tag.lower() == tag.lower()]
     logger.info(f"Retrieved {len(filtered_sessions)} sessions with tag '{tag}'")
     return filtered_sessions
 
@@ -116,7 +114,5 @@ def get_statistics() -> Stats:
         sessions_by_tag=sessions_by_tag,
     )
 
-    logger.info(
-        f"Calculated statistics: {total_minutes} minutes across {len(sessions)} sessions"
-    )
+    logger.info(f"Calculated statistics: {total_minutes} minutes across {len(sessions)} sessions")
     return stats
