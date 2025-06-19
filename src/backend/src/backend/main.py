@@ -17,9 +17,7 @@ from .config import (
 )
 
 # Configure logging
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
 # Create FastAPI application
@@ -53,9 +51,7 @@ async def health():
 @app.post("/sessions", response_model=StudySession)
 async def create_session(session: StudySessionCreate):
     """Create a new study session"""
-    logger.info(
-        f"Creating new session: {session.minutes} minutes with tag: {session.tag}"
-    )
+    logger.info(f"Creating new session: {session.minutes} minutes with tag: {session.tag}")
     try:
         new_session = save_session(session)
         return new_session
@@ -78,9 +74,7 @@ async def read_sessions(
             return get_all_sessions()
     except Exception as e:
         logger.error(f"Error fetching sessions: {str(e)}")
-        raise HTTPException(
-            status_code=500, detail=f"Error fetching sessions: {str(e)}"
-        )
+        raise HTTPException(status_code=500, detail=f"Error fetching sessions: {str(e)}")
 
 
 @app.get("/stats", response_model=Stats)
@@ -91,20 +85,13 @@ async def read_stats():
         return get_statistics()
     except Exception as e:
         logger.error(f"Error fetching statistics: {str(e)}")
-        raise HTTPException(
-            status_code=500, detail=f"Error fetching statistics: {str(e)}"
-        )
+        raise HTTPException(status_code=500, detail=f"Error fetching statistics: {str(e)}")
 
 
 # Marker for CI pipeline
 # This comment is used to trigger the CI pipeline when changes are made to this file.
 # This comment is used to trigger the CI pipeline when changes are made to this file.
 # This comment is used to trigger the CI pipeline when changes are made to this file.
-
-
-
-
-
 
 
 def main():
