@@ -1,0 +1,17 @@
+# Changelog
+
+## [0.2.0](https://github.com/chris-jelly/devops-study-app/compare/backend-v0.1.0...backend-v0.2.0) (2025-06-20)
+
+
+### Features
+
+* **backend:** add dockerfile for backend ([20f00af](https://github.com/chris-jelly/devops-study-app/commit/20f00aff3d59b3564d9144fa48f2b81ddcc4b490))
+* **backend:** Added layers to dockerfile ([bf4f2d8](https://github.com/chris-jelly/devops-study-app/commit/bf4f2d843af49ad60b1382ddbd3da85d9255ae5a))
+* **backend:** initial commit for backend ([3a5884b](https://github.com/chris-jelly/devops-study-app/commit/3a5884bf1dc1825fd88489ac0fc7ba4439631f92))
+
+
+### Bug Fixes
+
+* **backend:** pull dev dependencies out into dev ones ([986e0ac](https://github.com/chris-jelly/devops-study-app/commit/986e0aca3e4992f14aa1b2939f7941a1ed3e3538))
+* **backend:** pull dev dependencies out into dev ones ([bf660c4](https://github.com/chris-jelly/devops-study-app/commit/bf660c44a2945c4426659b5f343869d58bda2a22))
+* **ci:** add ruff to dependencies ([ca4fe0f](https://github.com/chris-jelly/devops-study-app/commit/ca4fe0f9d7948d4f4f72d7ecd5f59e6d8113fc76))
