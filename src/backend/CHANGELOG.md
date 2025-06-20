@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/chris-jelly/devops-study-app/compare/backend-v0.4.0...backend-v0.5.0) (2025-06-20)
+
+
+### Features
+
+* **backend:** Important Comments ([#19](https://github.com/chris-jelly/devops-study-app/issues/19)) ([3a5f699](https://github.com/chris-jelly/devops-study-app/commit/3a5f699038abb9eb051ae36028fd15f9a28fb3bb))
+
 ## [0.4.0](https://github.com/chris-jelly/devops-study-app/compare/backend-v0.3.0...backend-v0.4.0) (2025-06-20)
 
 
