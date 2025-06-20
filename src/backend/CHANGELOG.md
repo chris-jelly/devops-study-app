@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/chris-jelly/devops-study-app/compare/backend-v0.2.0...backend-v0.3.0) (2025-06-20)
+
+
+### Features
+
+* **container:** added container build and push ([#13](https://github.com/chris-jelly/devops-study-app/issues/13)) ([aade767](https://github.com/chris-jelly/devops-study-app/commit/aade767dd215b814c6965bcf152554f1ae807eb7))
+
 ## [0.2.0](https://github.com/chris-jelly/devops-study-app/compare/backend-v0.1.0...backend-v0.2.0) (2025-06-20)
 
 
