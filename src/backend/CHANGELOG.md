@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/chris-jelly/devops-study-app/compare/backend-v0.3.0...backend-v0.4.0) (2025-06-20)
+
+
+### Features
+
+* **container:** test container building ([#16](https://github.com/chris-jelly/devops-study-app/issues/16)) ([103ab3c](https://github.com/chris-jelly/devops-study-app/commit/103ab3cf3eade0c3e83ee75d9be8889847c5d5bb))
+
 ## [0.3.0](https://github.com/chris-jelly/devops-study-app/compare/backend-v0.2.0...backend-v0.3.0) (2025-06-20)
 
 
