@@ -118,5 +118,7 @@ def main():
     app.run(host=app.config["HOST"], port=app.config["PORT"], debug=app.config["DEBUG"])
 
 
+# This comment is used to trigger the CI pipeline when changes are made to this file.
+
 if __name__ == "__main__":
     main()
