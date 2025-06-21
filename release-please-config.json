@@ -12,6 +12,19 @@
                     "path": "uv.lock",
                     "jsonpath": "$.package[?(@.name.value=='study-tracker-backend')].version"
                 }]
+        },
+        "src/frontend": {
+            "release-type": "python",
+            "package-name": "study-tracker-frontend",
+            "component": "frontend",
+            "include_component-in-tag": true,
+            "changelog-path": "CHANGELOG.md",
+            "extra-files": [
+                {
+                    "type": "toml",
+                    "path": "uv.lock",
+                    "jsonpath": "$.package[?(@.name.value=='study-tracker-frontend')].version"
+                }]
         }
     }
 }
