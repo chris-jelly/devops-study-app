@@ -13,7 +13,7 @@ Each service has its own `pyproject.toml` and dependency management via uv.
 ## Commands
 
 ### Development Setup
-- `mise install` - Install all required tools (uv, k3d, k9s, kubectl, pre-commit, trivy)
+- `mise install` - Install all required tools (uv, pre-commit, trivy)
 - `./scripts/setup_project` - Initial project setup (installs commitizen, configures pre-commit hooks)
 
 ### Testing
