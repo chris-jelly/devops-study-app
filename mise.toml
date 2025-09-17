@@ -1,5 +1,9 @@
 [tools]
+k3d = "latest"
+k9s = "latest"
+kubectl = "latest"
 pre-commit = "latest"
+python = "3.13"
 trivy = "latest"
 uv = "latest"
 
